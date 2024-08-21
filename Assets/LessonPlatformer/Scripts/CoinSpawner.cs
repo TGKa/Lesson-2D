@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnerCoin : MonoBehaviour
+public class CoinSpawner : MonoBehaviour
 {
     [SerializeField] private Coin _prefab;
     [SerializeField] private List<Transform> _points;

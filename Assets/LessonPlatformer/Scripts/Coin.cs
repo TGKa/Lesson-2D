@@ -3,17 +3,15 @@ using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
-    private int value = 1;
+    private int _value = 1;
 
     public event Action Destroying;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    public int Value => _value;
+
+    public void Destroy()
     {
-        if(collision.TryGetComponent<Player>(out Player player))
-        {
-            player.AddMoney(value);
-            Destroying?.Invoke();
-            Destroy(gameObject);
-        }
+        Destroying?.Invoke();
+        Destroy(gameObject);
     }
 }

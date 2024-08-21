@@ -6,22 +6,19 @@ public class Patrol : MonoBehaviour
     [SerializeField] private float _speed;
 
     private int _currentPoint = 0;
+    private Rotator _rotator;
+
+    private void Awake() =>
+        _rotator = new Rotator();
 
     private void Update()
     {
         if (transform.position == _path[_currentPoint].position)
-            _currentPoint = (_currentPoint + 1) % _path.Length;
+            _currentPoint = ++_currentPoint % _path.Length;
 
-        Vector2 direction = Vector2.MoveTowards(transform.position, _path[_currentPoint].position, _speed * Time.deltaTime);
-        transform.position = direction;
-        LookAt();
-    }
+        Vector2 nextPosition = Vector2.MoveTowards(transform.position, _path[_currentPoint].position, _speed * Time.deltaTime);
+        transform.position = nextPosition;
 
-    private void LookAt()
-    {
-        if (transform.position.x < _path[_currentPoint].position.x)
-            transform.eulerAngles = new Vector2(0f, 0f);
-        else
-            transform.eulerAngles = new Vector2(0f, 180f);
+        transform.eulerAngles = _rotator.LookAt(transform.position.x < _path[_currentPoint].position.x);
     }
 }

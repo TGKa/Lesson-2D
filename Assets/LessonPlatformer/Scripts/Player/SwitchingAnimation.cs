@@ -15,7 +15,7 @@ public class SwitchingAnimation : MonoBehaviour
     public void StartIdleAnimation() =>
         _animator.CrossFade(IdleHash, 0f);
 
-    public void StartRunAnimation()=>
+    public void StartRunAnimation() =>
         _animator.CrossFade(RunHash, 0f);
 
     public void StartJumpAnimation()=>
