@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class InputReader : MonoBehaviour
@@ -8,9 +6,11 @@ public class InputReader : MonoBehaviour
 
     private float _direction;
     private bool _isJumping = false;
+    private bool _isAttack = false;
 
     public float Direction => _direction;
-    public bool GetIsJump => GetBoolIsTrigger();
+    public bool GetIsJump => GetBoolIsTrigger(ref _isJumping);
+    public bool GetIsAttack => GetBoolIsTrigger(ref _isAttack);
 
     private void Update()
     {
@@ -18,12 +18,15 @@ public class InputReader : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && _isJumping == false)
             _isJumping = true;
+
+        if (Input.GetMouseButtonDown(0))
+            _isAttack = true;
     }
 
-    private bool GetBoolIsTrigger()
+    private bool GetBoolIsTrigger(ref bool value)
     {
-        bool value = _isJumping;
-        _isJumping = false;
-        return value;
+        bool localValue = value;
+        value = false;
+        return localValue;
     }
 }

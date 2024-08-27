@@ -7,6 +7,7 @@ public class Mover : MonoBehaviour
     [SerializeField] private int _layerMovement;
     [SerializeField] private float _jumpForce;
     [SerializeField] private SwitchingAnimation _animator;
+    [SerializeField] private Attacker _attackign;
 
     private Rigidbody2D _rigibody;
     private Rotator _rotator;
@@ -27,13 +28,13 @@ public class Mover : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        if (_inputReader.Direction != 0)
+        if (_inputReader.Direction != 0 && _attackign.CanAttack)
             Move(_inputReader.Direction);
 
-        else if (_isGround == true)
+        else if (_isGround == true && _attackign.CanAttack)
             _animator.StartIdleAnimation();
 
-        if (_inputReader.GetIsJump && _isGround)
+        if (_inputReader.GetIsJump && _isGround && _attackign.CanAttack)
             Jump();
     }
 

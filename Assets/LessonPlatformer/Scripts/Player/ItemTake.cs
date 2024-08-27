@@ -1,21 +1,20 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Player))]
 public class ItemTake : MonoBehaviour
 {
-    private Player _player;
-
-    private void Start() =>
-        _player = GetComponent<Player>();
+    [SerializeField] private Player _player;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.TryGetComponent<Coin>(out Coin coin))
         {
             _player.AddMoney(coin.Value);
-            coin.Destroy();
+            Destroy(coin.gameObject);
+        }
+        else if(collision.TryGetComponent<MedicalKit>(out MedicalKit kit))
+        {
+            _player.Health.Heal(kit.Value);
+            Destroy(kit.gameObject);
         }
     }
 }

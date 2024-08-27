@@ -127,7 +127,91 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: SL_damage_0
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 640
+        width: 93
+        height: 90
+      alignment: 9
+      pivot: {x: 0.4408602, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 878ee6df37f1fa04b8788eeecb049495
+      internalID: 1910218920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SL_damage_1
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 444
+        width: 92
+        height: 90
+      alignment: 9
+      pivot: {x: 0.45652175, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8580d8b6282153f48a3e239f093ff497
+      internalID: -1829216830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SL_damage_2
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 248
+        width: 93
+        height: 90
+      alignment: 9
+      pivot: {x: 0.4516129, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 685406900e209134fab4a49694bcd5d6
+      internalID: -1948303508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SL_damage_3
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 52
+        width: 95
+        height: 90
+      alignment: 9
+      pivot: {x: 0.4421053, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfdc88f20f22e9e4fbc4967787653601
+      internalID: 2053849583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -138,7 +222,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SL_damage_0: 1910218920
+      SL_damage_1: -1829216830
+      SL_damage_2: -1948303508
+      SL_damage_3: 2053849583
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

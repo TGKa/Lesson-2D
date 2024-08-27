@@ -127,7 +127,175 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: SL_attack_1_0
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 1424
+        width: 93
+        height: 90
+      alignment: 9
+      pivot: {x: 0.4408602, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8969994bd0fc6348994788d02566683
+      internalID: -2096094198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SL_attack_1_1
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 1228
+        width: 117
+        height: 90
+      alignment: 9
+      pivot: {x: 0.5726496, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 389e5be2a7b69644ea7edf63a2273535
+      internalID: -420630527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SL_attack_1_2
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 1032
+        width: 114
+        height: 105
+      alignment: 9
+      pivot: {x: 0.5614035, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdaa9e6b65b86364690f10efd2900c16
+      internalID: 259208810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SL_attack_1_3
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 836
+        width: 92
+        height: 142
+      alignment: 9
+      pivot: {x: 0.45652175, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99e47d33b6523584ab7f36c1538b0393
+      internalID: 1363484617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SL_attack_1_4
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 640
+        width: 64
+        height: 139
+      alignment: 9
+      pivot: {x: 0.140625, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb822bd2fe3ad224bb623616fedc36d3
+      internalID: 1326744004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SL_attack_1_5
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 438
+        width: 107
+        height: 114
+      alignment: 9
+      pivot: {x: 0.084112145, y: 0.05263158}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cdf6a37f1a8a3540a544e6f1484e51b
+      internalID: -858534333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SL_attack_1_6
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 241
+        width: 104
+        height: 97
+      alignment: 9
+      pivot: {x: 0.086538464, y: 0.072164945}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ac8a32d3b6c12743a22a95ae68b6d2b
+      internalID: -1249010149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SL_attack_1_8
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 46
+        width: 101
+        height: 91
+      alignment: 9
+      pivot: {x: 0.08910891, y: 0.06593407}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 075a5252fd527664da54a327f6d93a96
+      internalID: 1331527513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -138,7 +306,16 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SL_attack_1_0: -2096094198
+      SL_attack_1_1: -420630527
+      SL_attack_1_2: 259208810
+      SL_attack_1_3: 1363484617
+      SL_attack_1_4: 1326744004
+      SL_attack_1_5: -858534333
+      SL_attack_1_6: -1249010149
+      SL_attack_1_7: -1441952183
+      SL_attack_1_8: 1331527513
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
