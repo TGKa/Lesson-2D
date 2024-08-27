@@ -4,11 +4,12 @@ using UnityEngine;
 public class TakingDamageState : BaseState
 {
     [SerializeField] private float _delayAnimation;
+    [SerializeField] private Collider2D _collider;
 
     private int _health;
     private Enemy _enemy;
-    private Collider2D _collider;
     private Coroutine _jobWait;
+    private WaitForSeconds _delay;
 
     private void OnDestroy()=>
         _enemy.Health.Changed -= OnChanged;
@@ -21,7 +22,9 @@ public class TakingDamageState : BaseState
         }
         else
         {
-            StopCoroutine(_jobWait);
+            if (_jobWait != null)
+                StopCoroutine(_jobWait);
+
             SwitchAnimation.StartDeathAnimation();
             _collider.enabled = false;
         }
@@ -31,7 +34,7 @@ public class TakingDamageState : BaseState
     {
         base.Init(enemy, targetSearching, switchingState);
 
-        _collider = GetComponentInParent<Collider2D>();
+        _delay = new WaitForSeconds(_delayAnimation);
         _enemy = enemy;
         _enemy.Health.Changed += OnChanged;
     }
@@ -54,7 +57,7 @@ public class TakingDamageState : BaseState
     {
         SwitchAnimation.StartHitAnimation();
 
-        yield return new WaitForSeconds(_delayAnimation);
+        yield return _delay;
 
         if (_health > 0)
         {

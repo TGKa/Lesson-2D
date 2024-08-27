@@ -11,7 +11,7 @@ public class TargetSearching : MonoBehaviour
     private bool _isTargetLost;
     private Coroutine _jobLoseTarget;
 
-    public bool CanAttackTarget => CanAttack();
+    public bool CanAttackTarget => TrySeeTarget(_attackingDistance);
 
     public bool IsTargetSee { get; private set; }
 
@@ -51,21 +51,11 @@ public class TargetSearching : MonoBehaviour
             StartLoseTarget();
     }
 
-    private bool CanAttack()
-    {
-        return TrySeeTarget(_attackingDistance);
-    }
-
     private bool TrySeeTarget(float distance)
     {
         var hit = Physics2D.Raycast(transform.position, transform.right, distance);
-        Debug.DrawRay(transform.position, transform.right * distance, Color.blue);
 
-        if (hit && hit.collider.GetComponent<Player>() == _target)
-            return true;
-
-        return false;
-
+        return hit && hit.collider.GetComponent<Player>() == _target;
     }
 
     private void StartLoseTarget()

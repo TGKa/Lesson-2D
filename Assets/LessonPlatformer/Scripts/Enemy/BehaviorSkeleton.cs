@@ -7,25 +7,25 @@ public class BehaviorSkeleton : MonoBehaviour,ISwitchingState
     [SerializeField] private Enemy _enemy;
     [SerializeField] private TargetSearching _targetSearching;    
 
-    private List<BaseState> _allState;
+    private List<BaseState> _allStates;
     private BaseState _currentState;
 
     private void Awake()
     {
-        _allState = new List<BaseState>();
-        GetComponents(_allState);
+        _allStates = new List<BaseState>();
+        GetComponents(_allStates);
     }
 
     private void Start()
     {
         InitAllState();
-        _currentState = _allState[0];
+        _currentState = _allStates[0];
         _currentState.enabled = true;
     }
 
     public void SwitchState<T>() where T : BaseState
     {
-        BaseState state = _allState.FirstOrDefault(state => state is T);
+        BaseState state = _allStates.FirstOrDefault(state => state is T);
         _currentState.enabled = false;
         _currentState = state;
         _currentState.enabled = true;
@@ -33,7 +33,7 @@ public class BehaviorSkeleton : MonoBehaviour,ISwitchingState
 
     private void InitAllState()
     {
-        foreach (var state in _allState)
+        foreach (var state in _allStates)
             state.Init(_enemy, _targetSearching, this);
     }
 }

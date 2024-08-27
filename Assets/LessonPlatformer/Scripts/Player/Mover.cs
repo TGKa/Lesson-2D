@@ -31,7 +31,7 @@ public class Mover : MonoBehaviour
         if (_inputReader.Direction != 0 && _attackign.CanAttack)
             Move(_inputReader.Direction);
 
-        else if (_isGround == true && _attackign.CanAttack)
+        else if (_isGround && _attackign.CanAttack)
             _animator.StartIdleAnimation();
 
         if (_inputReader.GetIsJump && _isGround && _attackign.CanAttack)
@@ -40,7 +40,7 @@ public class Mover : MonoBehaviour
 
     private void Move(float direction)
     {
-        if (_isGround == true)
+        if (_isGround)
             _animator.StartRunAnimation();
 
         _rigibody.velocity = new Vector2(direction * _speed, _rigibody.velocity.y);

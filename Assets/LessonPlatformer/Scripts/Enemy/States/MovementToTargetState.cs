@@ -25,7 +25,9 @@ public class MovementToTargetState : BaseState
                 SwitchingState.SwitchState<CombatState>();
         }
         else
+        {
             SwitchingState.SwitchState<PatrolState>();
+        }
     }
 
     public override void Init(Enemy enemy, TargetSearching targetSearching, ISwitchingState switchingState)
@@ -53,6 +55,6 @@ public class MovementToTargetState : BaseState
 
         float value = Mathf.Clamp(_enemy.position.x, position.x, position.y);
 
-        return position.x == value || position.y == value ? true : false;
+        return position.x == value || position.y == value;
     }
 }

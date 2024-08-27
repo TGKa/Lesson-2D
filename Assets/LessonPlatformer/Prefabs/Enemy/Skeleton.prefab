@@ -288,7 +288,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemy: {fileID: -8666615874593681180}
   _targetSearching: {fileID: 5064543328593940834}
-  _allState: []
 --- !u!114 &5430304943634440408
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -301,9 +300,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e43394b32f3ff84d9955e1748884385, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _patrolPath:
-  - {fileID: 0}
-  - {fileID: 0}
+  _patrolPath: []
 --- !u!114 &8331830743973092335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -316,6 +313,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e66c18d11d45b24499490a07f938a50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stopPosition: {fileID: 0}
 --- !u!114 &2285635613175819948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -342,3 +340,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _delayAnimation: 0.7
+  _collider: {fileID: 3093817200613418061}
